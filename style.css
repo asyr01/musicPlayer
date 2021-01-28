@@ -1,5 +1,5 @@
 /* Images created by: https://unsplash.com/@pawel_czerwinski */
-
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@400;700&display=swap');
 html {
   box-sizing: border-box;
 }
@@ -11,19 +11,23 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-
+  font-family: 'Oswald', sans-serif;
   font-size: 12px;
 }
 
-
+.player-container {
+  height: 500px;
+  width: 400px;
+  background: #e7e7e7;
+  border-radius: 20px;
+  box-shadow: 0 15px 30px 5px rgba(0, 0, 0, 0.3);
+}
 
 .img-container {
-
   position: relative;
   top: -50px;
   left: 50px;
 }
-
 
 h2 {
   font-size: 25px;
@@ -76,10 +80,7 @@ h3 {
   font-size: 30px;
   color: rgb(129, 129, 129);
   margin-right: 30px;
-
 }
-
-
 
 .main-button {
   font-size: 40px;
@@ -89,8 +90,6 @@ h3 {
 
 /* Media Query: iPhone (Vertical) */
 @media screen and (max-width: 376px) {
-
-
   .img-container {
     left: 29px;
   }
