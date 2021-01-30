@@ -18,8 +18,13 @@ const songs = [
       displayName: 'Seven Nation Army',
       artist: 'Jacinto Design'
     },
-    {
+   {
       name: 'jacinto-3',
+      displayName: 'Goodnight, Disco Queen',
+      artist: 'Jacinto Design'
+    },
+    {
+      name: 'metric-1',
       displayName: 'Front Row (Remix)',
       artist: 'Metric/Jacinto Design'
     }
@@ -45,10 +50,6 @@ function pauseSong(){
    music.pause();
 }
 
-
-// Event Listeners
-playBtn.addEventListener('click', () => (isPlaying ? pauseSong() : playSong()));
-
 // Updating DOM with current song
 function loadSong(song) {
    title.textContent = song.displayName;
@@ -57,3 +58,11 @@ function loadSong(song) {
    image.src = `img/${song.name}.jpg`;
 }
 
+// On Load - Select First song
+loadSong(songs[3]);
+
+
+// Event Listeners
+playBtn.addEventListener('click', () => (isPlaying ? pauseSong() : playSong()));
+prevBtn.addEventListener('click', prevSong);
+nextBtn.addEventListener('click', nextSong);
