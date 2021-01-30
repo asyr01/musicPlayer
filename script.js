@@ -6,6 +6,24 @@ const prevBtn = document.getElementById('prev');
 const playBtn = document.getElementById('play');
 const nextBtn = document.getElementById('next');
 
+// Music
+const songs = [
+   {
+     name: 'jacinto-1',
+     displayName: 'Electric Chill Machine',
+     artist: 'Jacinto Design'
+   },
+   {
+      name: 'jacinto-2',
+      displayName: 'Seven Nation Army',
+      artist: 'Jacinto Design'
+    },
+    {
+      name: 'jacinto-3',
+      displayName: 'Front Row (Remix)',
+      artist: 'Metric/Jacinto Design'
+    }
+]
 
 
 // Check if playing
@@ -30,3 +48,12 @@ function pauseSong(){
 
 // Event Listeners
 playBtn.addEventListener('click', () => (isPlaying ? pauseSong() : playSong()));
+
+// Updating DOM with current song
+function loadSong(song) {
+   title.textContent = song.displayName;
+   artist.textContent = song.artist;
+   music.src = `music/${song.name}.mp3`;
+   image.src = `img/${song.name}.jpg`;
+}
+
