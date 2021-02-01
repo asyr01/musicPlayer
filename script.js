@@ -117,8 +117,14 @@ function updateProgressBar(e){
    }
 }
 
+// Set progress bar
+function setProgressBar(e) {
+   
+}
+
 // Event Listeners
 playBtn.addEventListener('click', () => (isPlaying ? pauseSong() : playSong()));
 prevBtn.addEventListener('click', prevSong);
 nextBtn.addEventListener('click', nextSong);
-music.addEventListener('timeupdate', updateProgressBar)
+music.addEventListener('timeupdate', updateProgressBar);
+progressContainer.addEventListener('click', setProgressBar);
