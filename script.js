@@ -120,8 +120,9 @@ function updateProgressBar(e){
 // Set progress bar
 function setProgressBar(e) {
    const width = this.clientWidth;
-   console.log('width', width);
    const clickX = e.offsetX;
+   const { duration } = music;
+   music.currentTime = (clickX / width) * duration;
 }
 
 // Event Listeners
