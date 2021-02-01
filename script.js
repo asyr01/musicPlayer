@@ -119,7 +119,9 @@ function updateProgressBar(e){
 
 // Set progress bar
 function setProgressBar(e) {
-   
+   const width = this.clientWidth;
+   console.log('width', width);
+   const clickX = e.offsetX;
 }
 
 // Event Listeners
